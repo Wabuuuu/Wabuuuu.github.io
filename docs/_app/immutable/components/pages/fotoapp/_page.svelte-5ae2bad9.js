@@ -1,0 +1,3 @@
+import{S as A,i as x,s as P,k as m,q as i,l as f,m as u,r as p,h as n,b as c,D as _,B as h}from"../../../chunks/index-7f5b801e.js";function g(w){let t,r,s,o,l;return{c(){t=m("title"),r=i("Photo App"),s=i(` /*"Greetings, welcome to Anor Londo, where ageless grace and wonder unite.*/\r
+`),o=m("h1"),l=i("Photo App")},l(e){t=f(e,"TITLE",{});var a=u(t);r=p(a,"Photo App"),a.forEach(n),s=p(e,` /*"Greetings, welcome to Anor Londo, where ageless grace and wonder unite.*/\r
+`),o=f(e,"H1",{});var d=u(o);l=p(d,"Photo App"),d.forEach(n)},m(e,a){c(e,t,a),_(t,r),c(e,s,a),c(e,o,a),_(o,l)},p:h,i:h,o:h,d(e){e&&n(t),e&&n(s),e&&n(o)}}}class E extends A{constructor(t){super(),x(this,t,null,g,P,{})}}export{E as default};
