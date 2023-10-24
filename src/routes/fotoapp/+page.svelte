@@ -1,20 +1,38 @@
-<title>Photo App</title> /*"Greetings, welcome to lordran, where ageless grace and wonder unite.*/
-<h1>Photo App</h1>
+<title>Pontiff sulyvahn</title> /*"Greetings, welcome to lordran, where ageless grace and wonder unite.*/
+<h1>Pontiff sulyvahn</h1>
+
+<script> 
+let pontiff ="https://pbs.twimg.com/media/DsZoQchWkAACpcf?format=jpg&name=large"
+let artorias = "https://64.media.tumblr.com/17ad0d7a641de4a718156c5d60966047/tumblr_ofzbbspdgw1rggnpno9_640.jpg"
+let yhorm = "https://i.pinimg.com/236x/d4/e9/c4/d4e9c4193f808e01d5c7a50f2a3bc2fe.jpg"
+let images = [pontiff,artorias,yhorm]
+    
+</script>
 
 <div class = "fotoapp">
-    <img src="https://ae01.alicdn.com/kf/Sde0c578030684af9ba4d406e079b0ab9J.jpg_640x640Q90.jpg_.webp" alt="flexbox rules">
-    <img src="https://pbs.twimg.com/media/DsYh03RXcAEWoaz.jpg" alt="flexbox rules">
+    <img src= {pontiff} alt="flexbox rules">
+    <img src= {artorias} alt="flexbox rules">
+    <img src= {yhorm} alt="flexbox rules">
+    
+   
+
 
 </div>
+
+
+
 
 <style>
     .fotoapp{
     display: flex;
     direction: colum;
     max-width: 100vw; overflow: hidden;
+    align-items: center;
+    justify-content: space-around;
 }
 .fotoapp img {
-    max-width: 100%;
+    max-width: 50%;
+   
 }
     
 </style>

@@ -7,7 +7,7 @@
   <a href="/">Hem</a>
   <a href="/memory">Memory</a>
   <a href="/telltale">Telltale</a>
-  <a href="/fotoapp">Anor londo</a>
+  <a href="/fotoapp">Lordran</a>
 
   <a
     target="_blank" rel="noreferrer"
