@@ -8,6 +8,8 @@
   <a href="/memory">Memory</a>
   <a href="/telltale">Telltale</a>
   <a href="/fotoapp">Lordran</a>
+  <a href="/register">register</a>
+
 
   <a
     target="_blank" rel="noreferrer"
