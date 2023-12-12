@@ -9,7 +9,7 @@
   <a href="/telltale">Telltale</a>
   <a href="/fotoapp">Lordran</a>
   <a href="/register">register</a>
-
+  <a href="/todo">todo</a>
 
   <a
     target="_blank" rel="noreferrer"
@@ -21,3 +21,9 @@
 <hr />
 
 <slot />
+
+<style>
+  :global(body){
+    background-color:#503D42;
+  }
+</style>
