@@ -1,29 +1,26 @@
 <script>
 
+import "../app.pcss";
+ let links = ["/","/memory", "/telltale", "/fotoapp", "/register", "/todo", "/chat", "/search", "/blog","/clickerlogin", "/jobbigLogin", "/TangentbordsSpel","/KeyboardGame","/Startkod","/Webbshop"]
+
 </script>
 
-
-<nav >
-  <a href="/">Hem</a>
-  <a href="/memory">Memory</a>
-  <a href="/telltale">Telltale</a>
-  <a href="/fotoapp">Lordran</a>
-  <a href="/register">register</a>
-  <a href="/todo">todo</a>
-
-  <a
-    target="_blank" rel="noreferrer"
-    href="https://github.com/lisaviktorsson/lisaviktorsson.github.com"
-    >GitHub</a
-  >
+<nav class="bg-gray-800">
+  {#each links as link}
+     <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md
+  px-3 py-2 text-sm font-medium" href={link}>{link.length<2?"Hem":link.charAt(1).toUpperCase()
+    + link.slice(2)}</a>
+  {/each}
+ 
+  
 </nav>
 
-<hr />
+<hr>
 
-<slot />
+<slot></slot>
 
 <style>
-  :global(body){
-    background-color:#503D42;
-  }
+
+
+
 </style>

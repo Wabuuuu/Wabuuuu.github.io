@@ -9,7 +9,6 @@
   let newTask = '';
   let showRemoveConfirmation = false;
   let taskToRemove = null;
-
   function completeTask(index) {
     const task = doingTasks[index];
     completedTasks = [...completedTasks, task];

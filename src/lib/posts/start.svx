@@ -6,4 +6,5 @@ keywords: ["planning"]
 
 Hello, I am _Post One._
 
-**Nice to meet you!**
+
+**IN BATTLE THERE ARE NO EQUALS!**

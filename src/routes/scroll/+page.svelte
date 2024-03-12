@@ -1,8 +1,8 @@
 <script>
     import { fade, fly } from 'svelte/transition';
-  
+    
     // Define parallax layers
-    const layers = [0, 1, 2, 3];
+    const layers = [1, 2, 4];
   
     // Define messages for scrollytelling
     const messages = [
@@ -19,7 +19,7 @@
     let fader = true;
     $: currentMessage = messages[currentMessageIndex];
     // Calculate the step size for message changes
-    const step = Math.floor(600 / messages.length);
+    const step = Math.floor(5000 / messages.length);
 
     // Function to handle scroll events
     function handleScroll() {
@@ -34,14 +34,22 @@
   </script>
   
   <svelte:window bind:scrollY={y} on:scroll={handleScroll} />
+  <svelte:head>
   
+  <style>
+    nav {
+      position:fixed;
+      z-index:10;
+    }
+  </style>
+</svelte:head>
   <main>
     <!-- Parallax container for layers -->
     <div class="container">
       {#each layers as layer}
         <img
           style="transform: translate(0, {y < 2 ? y * layer : -y * layer / (layers.length - 1)}px)"
-          src={`https://www.devsamples.com/parallax-layer${layer}.png`}
+          src={`/BackgroundPixil${layer}.png`}
           alt={`parallax layer ${layer}`}
         >
       {/each}
@@ -51,39 +59,63 @@
     <div class="text">
         {#if fader && currentMessageIndex > 0}
           <!-- Animate text with fly-in and fade-out transitions -->
-            <div class="story" in:fly={{ y: 200, duration: 2000 }} out:fade>
-                <p>You have scrolled {y} pixels</p>
+            <div class="story" in:fly={{ y: 200, duration: 5000 }} out:fade>
+                <p>In battle there are no equals  {Math.round(y)} pixels</p>
                 <p>{currentMessage}</p>
-                <img src="https://www.onlygfx.com/wp-content/uploads/2021/02/6-pixel-heart-1.png" alt="heart"> 
+                <img src="https://cdn.shopify.com/s/files/1/0558/2081/files/Unmatched_Collection_TT_tall.png?v=1607988994" alt="heart"> 
             </div>
           {:else if currentMessageIndex === 0 }
-          <p>You have scrolled {y} pixels</p>
+          <p>In battle there are no equals {Math.round(y)} pixels</p>
           <p>{currentMessage}</p>
         {/if}
     </div>
+     <div class="topp">
+
+  </div>
   </main>
+
+
+ 
   
   <style>
     :global(body) {
       margin: 0;
       padding: 0;
-      background-color: #121212;
+      z-index: 0;
+    }
+
+    .topp{
+      height: 100%;
+      width: 100%;
+      z-index: 2;
+      position: sticky;
+      top:0;
+      left:0;
+      background-image: url("/BackgroundPixil3.png");
+      opacity: 0.9;
     }
   
     main {
-      height: 1200px;
+      height: 2000px;
+      position: relative;
+      margin: -20px;
+      padding: 0;
+      background-color: black;
     }
  
     .story img{
         width:300px;
         bottom:0;
+        z-index: 5;
     }
-  
+    
     .container {
-      position: relative;
+      z-index: 0;
+      position: fixed;
       height: 100vh;
       width: 100%;
       overflow: hidden; /* Clip overflow for parallax effect */
+      
     }
   
   
@@ -91,8 +123,10 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 100vw;
-      height: 100%;
+      width: 30vw;
+      height: 60%;
+      z-index: 0;
+
     }
   
     .text {
